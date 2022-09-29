@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
+          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0 http://maven.apache.org/xsd/settings-1.0.0.xsd">
+  
+  <!-- localRepository
+   | The path to the local repository maven will use to store artifacts.
+   | Default: ${user.home}/.m2/repository
+   -->
+  <localRepository>C:/maven/repository</localRepository>
+  
+  <mirrors>
+	<!-- 由阿里云提供的Maven中央仓库镜像 -->
+	<mirror>
+		<id>nexus-aliyun</id>
+		<name>Nexus aliyun</name>
+		<url>http://maven.aliyun.com/nexus/content/groups/public/</url>
+		<mirrorOf>*</mirrorOf>
+	</mirror> 
+
+	<!-- 由 Apache 提供的仓库 -->
+	<mirror>
+		<id>apache-repo</id>  
+		<name>apache Repository</name>  
+		<url>https://repository.apache.org/content/groups/public/</url> 
+		<mirrorOf>apache-repo</mirrorOf> <!-- 注意，这里必须写 apache-repo -->
+	</mirror> 
+  </mirrors>
+
+  <profiles></profiles>
+
+</settings>
